@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head> 
+        <meta charset="UTF-8"> <!--인코딩 방식: 세계 표준 인코딩 방식-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--익스플로러를 이용한다면 최신 버전 엣지로 화면 보여줌--> 
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"> <!--디바이스 종류별로 화면 출력 방식 지정-->
+        <!--viewport가 있어야 반응형 웹 페이지 제작할 때 모바일 화면에 결과물 출력이 가능-->
+        <title>MOVIE</title>
+        <link rel="stylesheet" href="css/board-style.css">
+    </head>
+
+    <body>
+        <div id = "wrap">
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <div id = "top">
+                <!-- 상단 메뉴 -->
+                <div id="menu-bar">
+                    <div id="logo">
+                        <a href="index.html"><img src="image/logo.png" alt="로고" /></a>
+                    </div>
+                    <ul id="menu-items">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signup.html">회원가입</a></li>
+                        <li><a href="my-movie.html">마이무비</a></li>
+                    </ul>
+                </div>
+
+                <!-- 검색 기능과 홈 게시판 메뉴 (메뉴 아래) -->
+                <div id="menu-search-bar">
+                    <ul id="left-menu">
+                        <li>
+                            <a href="movie-search.html">영화</a>
+                            <ul class="submenu">
+                                <li><a href="movie-search.html">영화 검색</a></li>
+                                <li><a href="category.html">카테고리</a></li>
+                                <li><a href="best.html">베스트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">극장</a>
+                            <ul class="submenu">
+                                <li><a href="near-theater.html">근처 극장</a></li>
+                                <li><a href="theater-search.html">극장 검색</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="submenu">
+                                <li><a href="ongoing-events.html">진행 중인 이벤트</a></li>
+                                <li><a href="past-events.html">종료 이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="board.html">커뮤니티</a>
+                            <ul class="submenu">
+                                <li><a href="board.html">게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <input type="text" placeholder="영화를 검색하세요..." />
+                        <button>검색</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--헤더-->
+            <div id = "header">
+                <h1>영화 이야기 게시판</h1>
+                <img src="image/logo.png" alt="사이트 로고 또는 대표 이미지">
+            </div>
+
+            <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+            <!--html에서 표(table) 구조를 나타내기 위해 사용하는 태그들-->
+            <div id = "container">
+                <table border ="1" cellspacing = "0" cellpadding = "10">
+                    <!--표의 머리글 부분을 정의, 각 열의 제목-->
+                    <thead>
+                        <!--표 안의 한 행을 정의, 표의 다른 섹션 안에서 사용, 여러개의 th, td를 포함 가능-->
+                        <tr>
+                            <th class = "title-column">제목</th>
+                            <th>작성자</th>
+                            <th class = "date-column">작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <!-- 각 페이지당 최대 10개의 행을 표시 -->
+                    <!-- 데이터 예제 -->
+                    <!--표의 본문을 정의, 실제 데이터-->
+                    <tbody>
+                        <!--1열-->
+                        <tr>
+                            <td class = "title-column">최신 영화 리뷰</td>
+                            <td>홍길동</td>
+                            <td class = "date-column">2024-11-04</td>
+                            <td>123</td>
+                        </tr>
+                        <!--2열-->
+                        <tr>
+                            <td class = "title-column">영화 추천 리스트</td>
+                            <td>성이름</td>
+                            <td class = "date-column">2024-11-04</td>
+                            <td>222</td>
+                        </tr>
+                        <!--3열-->
+                        <tr>
+                            <td class = "title-column">2024년 개봉 영화 총평</td>
+                            <td>리뷰해야돼</td>
+                            <td class = "date-column">2024-11-04</td>
+                            <td>321</td>
+                        </tr>
+                        <!--4열-->
+                        <tr>
+                            <td class = "title-column">영화 뭐 보지 고민 될 땐?</td>
+                            <td>닉네임</td>
+                            <td class = "date-column">2024-11-04</td>
+                            <td>45</td>
+                        </tr>
+                        <!--5열-->
+                        <tr>
+                            <td class = "title-column">로맨스 영화 리스트</td>
+                            <td>커플</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>512</td>
+                        <!--6열-->
+                        <tr>
+                            <td class = "title-column">6월 인기있던 영화들</td>
+                            <td>육열임</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>67</td>
+                        </tr>
+                        <!--7열-->
+                        <tr>
+                            <td class = "title-column">홈데이트에 좋은 영화</td>
+                            <td>하지만하지마</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>787</td>
+                        </tr>
+                        <!--8열-->
+                        <tr>
+                            <td class = "title-column">어벤져스 정주행하는 법</td>
+                            <td>마블안본지오래됨</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>811</td>
+                        </tr>
+                        <!--9열-->
+                        <tr>
+                            <td class = "title-column">이 영화 절대 보지 마세요</td>
+                            <td>노잼예스잼</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>9</td>
+                        </tr>
+                        <!--10열-->
+                        <tr>
+                            <td class = "title-column">이거 재미있나요??</td>
+                            <td>궁금</td>
+                            <td class = "date-column">2024-11-03</td>
+                            <td>100</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 게시판 검색 기능 -->
+                <div id="board-search-bar">
+                    <input type="text" placeholder="게시판 내 검색..." />
+                    <button>검색</button>
+                </div>
+                
+                <!-- 페이지네이션 버튼 -->
+                <div id="pagination">
+                    <button>맨앞</button>
+                    <button>이전</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>다음</button>
+                    <button>끝</button>
+                </div>
+            </div>
+
+            <div id = "footer">
+                <p>© 2024 Movie Board. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head> 
+        <meta charset="UTF-8"> <!--인코딩 방식: 세계 표준 인코딩 방식-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--익스플로러를 이용한다면 최신 버전 엣지로 화면 보여줌--> 
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"> <!--디바이스 종류별로 화면 출력 방식 지정-->
+        <!--viewport가 있어야 반응형 웹 페이지 제작할 때 모바일 화면에 결과물 출력이 가능-->
+        <title>MOVIE</title>
+        <link rel="stylesheet" href="css/my-movie-style.css">
+    </head>
+
+    <body>
+        <div id = "wrap">
+            <div id = "top">
+                <!-- 상단 메뉴 -->
+                <div id="menu-bar">
+                    <div id="logo">
+                        <a href="index.html"><img src="image/logo.png" alt="로고" /></a>
+                    </div>
+                    <ul id="menu-items">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signup.html">회원가입</a></li>
+                        <li><a href="my-movie.html">마이무비</a></li>
+                    </ul>
+                </div>
+
+                <!-- 검색 기능과 홈 메뉴 (메뉴 아래) -->
+                <div id="menu-search-bar">
+                    <ul id="left-menu">
+                        <li>
+                            <a href="movie-search.html">영화</a>
+                            <ul class="submenu">
+                                <li><a href="movie-search.html">영화 검색</a></li>
+                                <li><a href="category.html">카테고리</a></li>
+                                <li><a href="best.html">베스트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">극장</a>
+                            <ul class="submenu">
+                                <li><a href="near-theater.html">근처 극장</a></li>
+                                <li><a href="theater-search.html">극장 검색</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="submenu">
+                                <li><a href="ongoing-events.html">진행 중인 이벤트</a></li>
+                                <li><a href="past-events.html">종료 이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="board.html">커뮤니티</a>
+                            <ul class="submenu">
+                                <li><a href="board.html">게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <input type="text" placeholder="영화를 검색하세요..." />
+                        <button>검색</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id = "header"> 
+
+            </div>
+
+            <div id = "container">
+
+            </div>
+
+            <div id = "footer">
+
+            </div>
+        </div>
+    </body>
+    
+</html>

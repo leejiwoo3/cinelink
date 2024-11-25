@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head> 
+        <meta charset="UTF-8"> <!--인코딩 방식: 세계 표준 인코딩 방식-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--익스플로러를 이용한다면 최신 버전 엣지로 화면 보여줌--> 
+        <meta name="viewport" content="width=device-width, inital-scale=1.0"> <!--디바이스 종류별로 화면 출력 방식 지정-->
+        <!--viewport가 있어야 반응형 웹 페이지 제작할 때 모바일 화면에 결과물 출력이 가능-->
+        <title>HOME</title>
+        <link rel="stylesheet" href="css/index-style.css">
+        <script src="js/slideshow.js" defer></script>
+    </head>
+
+    <body>
+        <div id = "wrap">
+            <div id = "top">
+                <!-- 상단 메뉴 -->
+                <div id="menu-bar">
+                    <div id="logo">
+                        <a href="index.html"><img src="image/logo.png" alt="로고" /></a>
+                    </div>
+                    <ul id="menu-items">
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="signup.html">회원가입</a></li>
+                        <li><a href="my-movie.html">마이무비</a></li>
+                    </ul>
+                </div>
+
+                <!-- 검색 기능과 홈 메뉴 (메뉴 아래) -->
+                <div id="menu-search-bar">
+                    <ul id="left-menu">
+                        <li>
+                            <a href="movie-search.html">영화</a>
+                            <ul class="submenu">
+                                <li><a href="movie-search.html">영화 검색</a></li>
+                                <li><a href="category.html">카테고리</a></li>
+                                <li><a href="best.html">베스트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">극장</a>
+                            <ul class="submenu">
+                                <li><a href="near-theater.html">근처 극장</a></li>
+                                <li><a href="theater-search.html">극장 검색</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                            <ul class="submenu">
+                                <li><a href="ongoing-events.html">진행 중인 이벤트</a></li>
+                                <li><a href="past-events.html">종료 이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="board.html">커뮤니티</a>
+                            <ul class="submenu">
+                                <li><a href="board.html">게시판</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="search-bar">
+                        <input type="text" placeholder="영화를 검색하세요..." />
+                        <button>검색</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "header"> 
+
+            </div>
+
+            <div id = "container">
+                <div class="slideshow-container">
+                    <!-- 슬라이드 이미지들 -->
+                    <div class="slide fade">
+                        <img src="https://cf2.lottecinema.co.kr/lotte_image/2024/April/April_1920774.jpg" alt="메인 이미지 1" style="width:100%">
+                    </div>
+                    <div class="slide fade">
+                        <img src="https://cf2.lottecinema.co.kr/lotte_image/2024/Minutes/Minutes_1920774.jpg" alt="메인 이미지 2" style="width:100%">
+                    </div>
+                    <div class="slide fade">
+                        <img src="https://cf2.lottecinema.co.kr/lotte_image/2024/Ive/Ive_1920774.jpg" alt="메인 이미지 3" style="width:100%">
+                    </div>
+
+                    <!-- 왼쪽/오른쪽 네비게이션 -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <!-- 영화 목록 -->
+                <div id="popular-movies">
+                    <h2>지금 인기 있는 영화</h2>
+                    <div class="movie-list">
+                        <!-- 첫번째 영화 -->
+                        <div class="movie">
+                            <div class="movie-poster">
+                                <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202411/21251_103_1.jpg" alt="영화 1 포스터">
+                                <span class="rank">1</span>
+                                <div class="overlay">
+                                    <a href="movie1-detail.html">상세보기</a>
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-name">모아나2</p>
+                                <p class="movie-meta">예매율: 34.2% | 평점: ★ 9.8</p>
+                            </div>
+                        </div>
+                        <!-- 두번째 영화 -->
+                        <div class="movie">
+                            <div class="movie-poster">
+                                <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202411/20881_103_1.jpg" alt="영화 2 포스터">
+                                <span class="rank">2</span>
+                                <div class="overlay">
+                                    <a href="movie2-detail.html">상세보기</a>
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-name">위키드</p>
+                                <p class="movie-meta">예매율: 22.8% | ★ 9.2</p>
+                            </div>
+                        </div>
+                        <!-- 세번째 영화 -->
+                        <div class="movie">
+                            <div class="movie-poster">
+                                <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202411/21810_103_1.jpg" alt="영화 3 포스터">
+                                <span class="rank">3</span>
+                                <div class="overlay">
+                                    <a href="movie3-detail.html">상세보기</a>
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-name">히든페이스</p>
+                                <p class="movie-meta">예매율: 7.5% | 평점: ★ 8.9</p>
+                            </div>
+                        </div>
+                        <!-- 네번째 영화 -->
+                        <div class="movie">
+                            <div class="movie-poster">
+                                <img src="https://cf.lottecinema.co.kr//Media/MovieFile/MovieImg/202412/21872_103_1.jpg" alt="영화 4 포스터">
+                                <span class="rank">4</span>
+                                <div class="overlay">
+                                    <a href="movie4-detail.html">상세보기</a>
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-name">1승</p>
+                                <p class="movie-meta">예매율: 6.8% | 평점: ★ 8.2</p>
+                            </div>
+                        </div>
+                        <!-- 다섯번째 영화 -->
+                        <div class="movie">
+                            <div class="movie-poster">
+                                <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88992/88992_320.jpg" alt="영화 5 포스터">
+                                <span class="rank">5</span>
+                                <div class="overlay">
+                                    <a href="movie5-detail.html">상세보기</a>
+                                </div>
+                            </div>
+                            <div class="movie-info">
+                                <p class="movie-name">소방관</p>
+                                <p class="movie-meta">예매율: 4.6% | 평점: ★ 8.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div id = "footer">
+                <p>© 2024 Movie Board. All rights reserved.</p>
+            </div>
+        </div>
+    </body>
+</html>
