@@ -1,0 +1,220 @@
+@charset "utf-8";
+@import url(font.css);
+
+/* reset */
+* {margin: 0; padding: 0;}
+ul, ol, li {list-style:none;}
+a {text-decoration: none;}
+
+
+/* @@@@@@페이지 전체 스타일@@@@@@ */
+body {
+    font:16px 'Pretendard-Regular', '돋움', Dotum, sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* @@@@@@전체 래퍼 스타일@@@@@@ */
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+}
+
+/* @@@@@@탑 스타일@@@@@@ */
+#top {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rbga(0, 0, 0, 0.1);
+}
+
+/* @@@@@@상단 메뉴바 스타일@@@@@@ */
+/* 상위 메뉴 스타일 */
+#menu-items, #left-menu {
+    display: flex;
+    gap: 20px;
+}
+
+#menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+#logo img {
+    height: 40px; /* 로고 이미지 크기 */
+}
+
+#menu-items li, #left-menu li {
+    list-style: none;
+    position: relative;
+}
+
+#menu-items a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+/* @@@@@@검색창과 메뉴 스타일@@@@@@ */
+#menu-search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+/* @@@@@@상위 메뉴 스타일@@@@@@ */
+#left-menu {
+    position: relative;
+    z-index: 10; /* 상위 메뉴를 다른 요소보다 위로 */
+}
+
+#left-menu > li > a {
+    display: inline-block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    margin-right: 15px;
+}
+
+/* 상위 메뉴 마우스 오버 시 효과 */
+#left-menu > li > a:hover {
+    font-weight: bold;
+    color: #ff4500; /* 색상 변경 */
+}
+
+#left-menu > li > a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px; /* 밑줄 두께 */
+    background: #ff4500; /* 밑줄 색상 */
+    transition: width 0.3s;
+}
+
+#left-menu a:hover::after {
+    width: 100%;
+}
+
+ /* 하위 메뉴 컨테이너 스타일 */
+ .submenu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 상위 메뉴 바로 아래 */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* 검정색 불투명 */
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    width: auto;
+    padding: 10px 0;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    visibility: hidden; /* 초기 상태 */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 15px;
+    width: 100%; /* 전체 너비 사용 */
+    white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+    transition: none; /* 하위 메뉴에선 효과 없음 */
+}
+
+/* 하위 메뉴 마우스 오버 시 효과 제거 */
+.submenu a:hover {
+    color: #fff; /* 텍스트 색상 유지 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+
+/* 마우스를 올릴 때 하위 메뉴 보이기 */
+#left-menu li:hover .submenu {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 헤더 및 다른 요소가 가리지 않게 설정 */
+#top, #header {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* @@@@@@검색 바 스타일@@@@@@ */
+#search-bar {
+    display: flex;
+}
+
+#board-search-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+}
+
+#search-bar input {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-bar button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#search-bar button:hover {
+    background-color: #555;
+}
+
+
+/* @@@@@@헤더 스타일@@@@@@ */
+#header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    z-index: 4;
+}
+
+
+/* @@@@@@컨테이너 스타일@@@@@@ */
+#container {
+    padding: 20px;
+}
+
+
+/* @@@@@@푸터 스타일@@@@@@ */
+#footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+}
