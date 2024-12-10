@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--익스플로러를 이용한다면 최신 버전 엣지로 화면 보여줌--> 
         <meta name="viewport" content="width=device-width, inital-scale=1.0"> <!--디바이스 종류별로 화면 출력 방식 지정-->
         <!--viewport가 있어야 반응형 웹 페이지 제작할 때 모바일 화면에 결과물 출력이 가능-->
-        <title>MOVIE</title>
-        <link rel="stylesheet" href="css/my-movie-style.css">
+        <title>근처 극장 검색</title>
+        <link rel="stylesheet" href="css/near-theater.css">
     </head>
-
+    
     <body>
         <div id = "wrap">
             <div id = "top">
@@ -62,19 +62,23 @@
                     </div>
                 </div>
             </div>
-            
             <div id = "header"> 
-
+            
             </div>
 
             <div id = "container">
-
+                <h1>근처 극장 찾기</h1>
+                <button id="find-theater-button">현재 위치에서 극장 찾기</button>
+                <div id="map"></div>
+                <div id="theater-list">
+                    <!-- 근처 극장 목록이 여기에 표시됩니다 -->
+                </div>
             </div>
-
-            <div id = "footer">
-
+            <div id="footer">
+                <p>© 2024 Movie Board. All rights reserved.</p>
             </div>
         </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3VILn3BgW7r_JHOBnlYPonr0mr3VeoJ4&libraries=places"></script>
+        <script src="js/near-theater.js"></script>
     </body>
-    
 </html>

@@ -206,28 +206,37 @@ body {
 /* @@@@@@컨테이너 스타일@@@@@@ */
 #container {
     padding: 20px;
-}
-
-#search-section {
     text-align: center;
-    margin: 20px 0;
 }
 
-#movie-search-input {
-    width: 300px;
+#category-section {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#sort-select {
     padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#genre-select {
+    padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 #search-button {
     padding: 10px 20px;
+    margin-left: 10px;
     border: none;
     background-color: #333;
     color: #fff;
-    border-radius: 5px;
     cursor: pointer;
-    margin-left: 10px;
+    border-radius: 5px;
 }
 
 #search-button:hover {

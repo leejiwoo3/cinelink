@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--익스플로러를 이용한다면 최신 버전 엣지로 화면 보여줌--> 
         <meta name="viewport" content="width=device-width, inital-scale=1.0"> <!--디바이스 종류별로 화면 출력 방식 지정-->
         <!--viewport가 있어야 반응형 웹 페이지 제작할 때 모바일 화면에 결과물 출력이 가능-->
-        <title>MOVIE</title>
-        <link rel="stylesheet" href="css/my-movie-style.css">
+        <title>영화 카테고리</title>
+        <link rel="stylesheet" href="css/movie-category.css">
     </head>
 
     <body>
@@ -68,13 +68,32 @@
             </div>
 
             <div id = "container">
+                <h1>영화 카테고리 검색</h1>
+                <div id="category-section">
+                    <label for="genre-select">카테고리 선택:</label>
+                    <select id="genre-select">
+                        <option value="">-- 카테고리 선택 --</option>
+                    </select>
 
+                    <label for="sort-select">정렬 기준:</label>
+                    <select id="sort-select">
+                        <option value="popularity.desc">인기순</option>
+                        <option value="vote_average.desc">별점순</option>
+                        <option value="release_date.desc">최신순</option>
+                    </select>
+
+                    <button id="search-button">검색</button>
+                </div>
+                <div id="search-results">
+                    <!-- 검색 결과가 여기에 표시됩니다 -->
+                </div>
             </div>
 
             <div id = "footer">
-
+                <p>© 2024 Movie Board. All rights reserved.</p>
             </div>
         </div>
+        <script src="js/movie-category.js"></script>
     </body>
     
 </html>
